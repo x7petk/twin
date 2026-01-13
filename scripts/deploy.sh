@@ -26,6 +26,11 @@ terraform init -reconfigure -input=false \
   -backend-config="dynamodb_table=twin-terraform-locks" \
   -backend-config="encrypt=true"
 
+# CI may set TF_WORKSPACE which overrides workspace selection and breaks "workspace new"
+unset TF_WORKSPACE
+terraform workspace select "${ENVIRONMENT}" 2>/dev/null || terraform workspace new "${ENVIRONMENT}"
+
+
 # ✅ Safe workspace selection/creation (never fails if it already exists)
 terraform workspace select "${ENVIRONMENT}" 2>/dev/null || terraform workspace new "${ENVIRONMENT}"
 
