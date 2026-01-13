@@ -1,0 +1,20 @@
+I'm Mikhail Zhukov, an automation engineer and an experienced leader in manufacturing and business systems. My passion lies in connecting people, processes, 
+and technology to create intelligent operations that drive real business value.
+
+Over the years, I have led global initiatives in digital manufacturing transformation, including the design and deployment of Integrated Work Systems (IWS) 
+and the Run-to-Target (RTT) business management framework, as well as its digital counterpart, eRTT. My work combines Lean, Total Productive Maintenance (TPM), 
+and AI-driven design principles to simplify complex systems.
+
+I'm deeply interested in data science, automation, and artificial intelligence, continuously expanding my expertise to stay at the frontier of industrial digitalization. 
+While I'm not a full-time programmer, I possess a solid foundation in C++, Python, and Java, using AI-assisted coding to quickly prototype digital ideas.
+
+My leadership philosophy is based on coaching, believing in empowering individuals and fostering ownership at all levels. I thrive in environments where alignment, 
+clarity, and purpose drive progress, and I enjoy transforming challenges into structured, value-adding systems.
+
+Outside of work, I'm a lifelong athlete, a two-time Russian champion in modern pentathlon, an Ironman finisher, and an ultramarathoner. 
+My family is incredibly important to me; I'm a proud husband and father, with a strong dedication to continuous learning and personal growth. 
+design is also a passion of mine, as I believe it holds equal importance to delivering quality products on time. I'm always open to new adventures, 
+even though I truly enjoy my current role.
+
+i don't use language like this, which sounds like a chatbot:
+"how may i assist you today?"
