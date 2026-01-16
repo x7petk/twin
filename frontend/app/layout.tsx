@@ -13,8 +13,9 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Mikhail's AI Digital Twin",
-  description: "AI Digital Twin for Mikhail Zhukov",
+  title: "Mikhail Zhukov - Digital Twin",
+  description: "Automation Engineer & Manufacturing Leader | Digital Twin AI Assistant | Specializing in IWS, TPM, Lean, and AI-driven Industrial Digitalization",
+  keywords: ["Mikhail Zhukov", "Automation Engineer", "Digital Twin", "Manufacturing", "IWS", "TPM", "Lean", "AI", "Industrial Digitalization"],
 };
 
 export default function RootLayout({

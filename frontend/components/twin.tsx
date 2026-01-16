@@ -103,31 +103,44 @@ export default function Twin() {
     }, []);
 
     return (
-        <div className="flex flex-col h-full bg-gray-50 rounded-lg shadow-lg">
-            {/* Header */}
-            <div className="bg-gradient-to-r from-slate-700 to-slate-800 text-white p-4 rounded-t-lg">
-                <h2 className="text-xl font-semibold flex items-center gap-2">
-                    <Bot className="w-6 h-6" />
-                    AI Digital Twin
-                </h2>
-                <p className="text-sm text-slate-300 mt-1">Your AI course companion</p>
+        <div className="flex flex-col h-full bg-white rounded-xl shadow-2xl border border-gray-200 overflow-hidden">
+            {/* Professional Header */}
+            <div className="bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-600 text-white p-5 md:p-6 rounded-t-xl">
+                <div className="flex items-center gap-3">
+                    <div className="flex-shrink-0 w-10 h-10 bg-white/20 rounded-full flex items-center justify-center backdrop-blur-sm">
+                        <Bot className="w-6 h-6" />
+                    </div>
+                    <div>
+                        <h2 className="text-xl md:text-2xl font-bold flex items-center gap-2">
+                            Digital Twin Assistant
+                        </h2>
+                        <p className="text-sm text-blue-100 mt-0.5">Ask me about automation, manufacturing, IWS, TPM, or AI</p>
+                    </div>
+                </div>
             </div>
 
             {/* Messages */}
-            <div className="flex-1 overflow-y-auto p-4 space-y-4">
+            <div className="flex-1 overflow-y-auto p-4 md:p-6 space-y-4 bg-gradient-to-b from-gray-50 to-white">
                 {messages.length === 0 && (
-                    <div className="text-center text-gray-500 mt-8">
+                    <div className="text-center text-gray-600 mt-12">
                         {hasAvatar ? (
                             <img 
                                 src="/avatar.jpg" 
-                                alt="Digital Twin Avatar" 
-                                className="w-20 h-20 rounded-full mx-auto mb-3 border-2 border-gray-300"
+                                alt="Mikhail Zhukov" 
+                                className="w-24 h-24 rounded-full mx-auto mb-4 border-4 border-blue-200 shadow-lg"
                             />
                         ) : (
-                            <Bot className="w-12 h-12 mx-auto mb-3 text-gray-400" />
+                            <div className="w-24 h-24 rounded-full mx-auto mb-4 bg-gradient-to-br from-blue-500 to-indigo-600 flex items-center justify-center shadow-lg">
+                                <Bot className="w-12 h-12 text-white" />
+                            </div>
                         )}
-                        <p>Hello! I&apos;m your Digital Twin.</p>
-                        <p className="text-sm mt-2">Ask me anything about AI deployment!</p>
+                        <h3 className="text-xl font-semibold text-gray-800 mb-2">Hello, I&apos;m Mikhail&apos;s Digital Twin</h3>
+                        <p className="text-gray-600 mb-3">I can help you learn about automation, manufacturing systems, and digital transformation.</p>
+                        <div className="flex flex-wrap justify-center gap-2 mt-4">
+                            <span className="px-3 py-1 text-xs bg-blue-50 text-blue-700 rounded-full border border-blue-200">IWS & TPM</span>
+                            <span className="px-3 py-1 text-xs bg-indigo-50 text-indigo-700 rounded-full border border-indigo-200">Lean Manufacturing</span>
+                            <span className="px-3 py-1 text-xs bg-purple-50 text-purple-700 rounded-full border border-purple-200">AI & Automation</span>
+                        </div>
                     </div>
                 )}
 
@@ -155,16 +168,16 @@ export default function Twin() {
                         )}
 
                         <div
-                            className={`max-w-[70%] rounded-lg p-3 ${
+                            className={`max-w-[75%] md:max-w-[70%] rounded-xl p-4 shadow-sm ${
                                 message.role === 'user'
-                                    ? 'bg-slate-700 text-white'
-                                    : 'bg-white border border-gray-200 text-gray-800'
+                                    ? 'bg-gradient-to-br from-blue-600 to-indigo-700 text-white'
+                                    : 'bg-white border border-gray-200 text-gray-800 shadow-md'
                             }`}
                         >
-                            <p className="whitespace-pre-wrap">{message.content}</p>
+                            <p className="whitespace-pre-wrap leading-relaxed">{message.content}</p>
                             <p
-                                className={`text-xs mt-1 ${
-                                    message.role === 'user' ? 'text-slate-300' : 'text-gray-500'
+                                className={`text-xs mt-2 ${
+                                    message.role === 'user' ? 'text-blue-100' : 'text-gray-500'
                                 }`}
                             >
                                 {message.timestamp.toLocaleTimeString()}
@@ -173,7 +186,7 @@ export default function Twin() {
 
                         {message.role === 'user' && (
                             <div className="flex-shrink-0">
-                                <div className="w-8 h-8 bg-gray-600 rounded-full flex items-center justify-center">
+                                <div className="w-8 h-8 bg-gradient-to-br from-blue-500 to-indigo-600 rounded-full flex items-center justify-center shadow-md">
                                     <User className="w-5 h-5 text-white" />
                                 </div>
                             </div>
@@ -187,11 +200,11 @@ export default function Twin() {
                             {hasAvatar ? (
                                 <img 
                                     src="/avatar.jpg" 
-                                    alt="Digital Twin Avatar" 
-                                    className="w-8 h-8 rounded-full border border-slate-300"
+                                    alt="Mikhail Zhukov" 
+                                    className="w-8 h-8 rounded-full border-2 border-blue-200 shadow-sm"
                                 />
                             ) : (
-                                <div className="w-8 h-8 bg-slate-700 rounded-full flex items-center justify-center">
+                                <div className="w-8 h-8 bg-gradient-to-br from-blue-500 to-indigo-600 rounded-full flex items-center justify-center shadow-md">
                                     <Bot className="w-5 h-5 text-white" />
                                 </div>
                             )}
@@ -210,23 +223,23 @@ export default function Twin() {
             </div>
 
             {/* Input */}
-            <div className="border-t border-gray-200 p-4 bg-white rounded-b-lg">
-                <div className="flex gap-2">
+            <div className="border-t border-gray-200 p-4 md:p-5 bg-white rounded-b-xl">
+                <div className="flex gap-3">
                     <input
                         ref={inputRef}
                         type="text"
                         value={input}
                         onChange={(e) => setInput(e.target.value)}
                         onKeyDown={handleKeyPress}
-                        placeholder="Type your message..."
-                        className="flex-1 px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-slate-600 focus:border-transparent text-gray-800"
+                        placeholder="Ask about automation, IWS, TPM, Lean, or AI..."
+                        className="flex-1 px-4 py-3 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 text-gray-800 placeholder-gray-400 transition-all"
                         disabled={isLoading}
                         autoFocus
                     />
                     <button
                         onClick={sendMessage}
                         disabled={!input.trim() || isLoading}
-                        className="px-4 py-2 bg-slate-700 text-white rounded-lg hover:bg-slate-800 focus:outline-none focus:ring-2 focus:ring-slate-600 disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
+                        className="px-5 py-3 bg-gradient-to-r from-blue-600 to-indigo-600 text-white rounded-xl hover:from-blue-700 hover:to-indigo-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 disabled:opacity-50 disabled:cursor-not-allowed transition-all shadow-md hover:shadow-lg flex items-center justify-center"
                     >
                         <Send className="w-5 h-5" />
                     </button>
